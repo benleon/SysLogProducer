@@ -9,9 +9,13 @@ My test configuration on log generating server
 Add to rsyslog.conf:
 
 $ActionQueueType LinkedList # use asynchronous processing
+
 $ActionQueueFileName srvrfwd1 # set file name, also enables disk mode
+
 $ActionResumeRetryCount -1 # infinite retries on insert failure
+
 $ActionQueueSaveOnShutdown on # save in-memory data if rsyslog shuts down
+
 local3.* @@<SyslogServerIP>:45553
 
 To test run the following python script which will create dummy logs:
