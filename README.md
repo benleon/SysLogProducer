@@ -16,7 +16,7 @@ local3.* @@<SyslogServerIP>:45553
 
 To test run the following python script which will create dummy logs:
 
-resources/loggerDemo.py
+resources/loggerTest.py
 
 You can then see the logs in the kafka consumer:
 
